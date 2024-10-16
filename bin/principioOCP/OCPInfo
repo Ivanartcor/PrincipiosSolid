@@ -1,0 +1,52 @@
+OCP: establece que una clase debe estar abierta para la extensión pero cerrada para la modificación.
+Deberíamos poder añadir nuevas funcionalidades a una clase sin alterar su implementación existente.
+
+Se utilizan técnicas como la herencia, el polimorfismo y la
+programación basada en interfaces o abstractas.
+
+
+Para aplicar el Principio de Abierto/Cerrado en el diseño de clases, considera los siguientes
+pasos:
+
+1. Definir Interfaces o Clases Abstractas: Utiliza interfaces o clases abstractas para
+definir el comportamiento esperado. Las clases concretas deben implementar estas
+interfaces o extender estas clases abstractas.
+
+2. Utilizar Herencia y Polimorfismo: Permite que las nuevas funcionalidades se
+agreguen mediante la creación de nuevas clases derivadas en lugar de modificar las
+existentes.
+
+3. Diseñar con Extensibilidad en Mente: Cuando diseñes una clase, piensa en cómo
+se puede extender sin modificar el código existente. Establece puntos de extensión,
+como métodos que pueden ser sobrescritos o comportamientos que se pueden
+sobrecargar.
+
+4. Evitar la Modificación de Clases Existentes: Siempre que sea posible, evita hacer
+cambios en clases que ya están en uso. En su lugar, extiende la funcionalidad
+mediante nuevas clases o componentes.
+
+
+Identificación de Violaciones:
+
+● Modificación de Código Existente: Si al añadir nuevas funcionalidades o realizar
+cambios necesitas modificar el código fuente de una clase que ya está en uso, es
+probable que estés violando OCP.
+
+● Condicionales para Nuevas Funcionalidades: La presencia de condicionales en
+una clase para manejar diferentes tipos de comportamiento (como el ejemplo del
+método draw con diferentes formas) es una señal de violación de OCP.
+
+
+Mejoras:
+
+● Refactorización para Interfaces o Clases Abstractas: Refactoriza el código para
+utilizar interfaces o clases abstractas. Asegúrate de que las clases concretas
+implementen o extiendan estas definiciones en lugar de alterar el código existente.
+
+● Uso de Patrones de Diseño: Considera el uso de patrones de diseño como el
+patrón de estrategia o el patrón de fábrica, que ayudan a mantener el código abierto
+para la extensión y cerrado para la modificación.
+
+● Aplicación de Principios SOLID: Asegúrate de que las clases cumplen con todos
+los principios SOLID, ya que suelen complementarse entre sí y promover un diseño
+más robusto y flexible.

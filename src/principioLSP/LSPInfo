@@ -1,0 +1,59 @@
+Principio de Sustitución de Liskov (LSP) establece que los objetos de una clase derivada
+deben poder reemplazar a los objetos de la clase base sin alterar el funcionamiento correcto
+del programa.
+
+Las clases derivadas deben ser sustituibles por sus clases
+base sin introducir errores o comportamientos inesperados.
+
+
+
+Para aplicar el Principio de Sustitución de Liskov en el diseño de clases, considera los
+siguientes pasos:
+
+1. Diseñar con la Herencia en Mente: Asegúrate de que las clases derivadas
+mantengan el comportamiento esperado por los clientes de la clase base. Las clases
+derivadas deben cumplir con los contratos definidos por las clases base.
+
+2. Validar el Comportamiento: Implementa pruebas que verifiquen que las clases
+derivadas funcionan correctamente en lugar de las clases base. Estas pruebas
+deben asegurarse de que no se introduzcan comportamientos inesperados.
+
+3. Utilizar Polimorfismo: Aprovecha el polimorfismo para reemplazar objetos de la
+clase base con objetos de clases derivadas, asegurándote de que no haya fallos en
+la lógica del programa.
+
+4. Evitar Violaciones: Evita situaciones en las que una clase derivada cambia el
+comportamiento esperado de la clase base, como lanzar excepciones inesperadas o
+alterar el estado de manera que no se cumple con las expectativas del cliente.
+
+
+Identificación de Violaciones:
+
+● Excepciones Inesperadas: Si una clase derivada lanza excepciones que no se
+esperaban en la clase base, es una señal de violación de LSP.
+
+● Comportamiento Inconsistente: Cuando una clase derivada altera el
+comportamiento esperado por los clientes de la clase base, violando el contrato
+establecido.
+
+● Redefinición de Métodos: Si los métodos de una clase derivada no se comportan
+de la misma manera que en la clase base, o si alteran el estado de manera
+incompatible.
+
+
+Mejoras:
+
+● Revisar Contratos de Clase: Asegúrate de que los contratos de los métodos en la
+clase base sean claramente definidos y respetados por las clases derivadas.
+
+● Utilizar Tipos Abstractos: Diseña tus clases base como abstractas o interfaces con
+métodos que no tengan implementaciones concretas, dejando la implementación
+específica a las clases derivadas.
+
+● Refactorizar para Cumplir con LSP: Refactoriza las clases para garantizar que las
+clases derivadas sean compatibles con la clase base. Esto puede implicar la
+eliminación de métodos que no se deben implementar en las clases derivadas.
+
+● Aplicar Principios de Diseño: Asegúrate de que tu diseño sigue los principios
+SOLID en su conjunto, ya que estos principios suelen complementarse entre sí y
+ayudarán a evitar violaciones del LSP.

@@ -1,0 +1,58 @@
+El Principio de Segregación de Interfaces (ISP) establece que los clientes no deben verse
+obligados a depender de interfaces que no utilizan.
+
+Este principio ayuda a evitar la creación de interfaces grandes y monolíticas,
+promoviendo interfaces más pequeñas y especializadas.
+
+El ISP busca reducir el acoplamiento y aumentar la cohesión al diseñar interfaces que
+reflejen las necesidades específicas de sus clientes. Al aplicar ISP, las clases se vuelven
+más flexibles y el código es más fácil de entender, mantener y extender.
+
+
+
+Para aplicar el Principio de Segregación de Interfaces en el diseño de clases, sigue estos
+pasos:
+
+1. Analizar Necesidades de Cliente: Identifica qué métodos son necesarios para cada
+cliente de la interfaz. Crea interfaces especializadas en lugar de interfaces grandes
+que incluyan métodos irrelevantes para algunos clientes.
+
+2. Dividir Interfaces: Divide las interfaces grandes en interfaces más pequeñas y
+específicas. Esto permite que las clases implementen solo los métodos que
+necesitan y eviten dependencias innecesarias.
+
+3. Refactorizar Interfaces Existentes: Revisa y refactoriza las interfaces existentes
+que pueden estar violando ISP, dividiéndolas en interfaces más pequeñas si es
+necesario.
+
+4. Utilizar Interfaces en Lugar de Clases Abstractas: Cuando sea apropiado, utiliza
+interfaces en lugar de clases abstractas para definir contratos específicos y permitir
+una mayor flexibilidad en la implementación.
+
+
+
+Identificación de Violaciones:
+
+● Métodos Irrelevantes en Interfaces: Si una interfaz incluye métodos que algunas
+clases no utilizan o no pueden implementar, esto indica una violación de ISP.
+
+● Implementaciones Forzadas: Cuando las clases deben implementar métodos que
+no tienen sentido para ellas (como RobotWorker en el ejemplo anterior), es una
+señal de que la interfaz está violando ISP.
+
+● Interfaces Monolíticas: Interfaces que abarcan una amplia gama de
+funcionalidades en lugar de enfocarse en un conjunto específico de
+comportamientos.
+Mejoras:
+
+● Crear Interfaces Especializadas: Diseña interfaces que reflejen solo los métodos
+relevantes para cada cliente. Usa la técnica de "interface segregation" para dividir
+interfaces grandes en interfaces más pequeñas y manejables.
+
+● Refactorizar el Código: Identifica y refactoriza las interfaces grandes en tu código
+base para cumplir con ISP, asegurando que cada clase implemente solo las
+interfaces que necesita.
+
+● Aplicar Principios SOLID: Asegúrate de que tu diseño sigue los principios SOLID
+en su conjunto. La aplicación correcta del ISP contribuirá a un diseño de software
+más limpio y flexible.

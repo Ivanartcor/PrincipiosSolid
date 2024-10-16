@@ -1,0 +1,46 @@
+SRP: una clase debe tener una única responsabilidad o razón para cambiar.
+SRP busca evitar que una clase se encargue de múltiples responsabilidades,
+lo que puede hacer que el código sea difícil de entender, probar y mantener.
+
+Para aplicar el Principio de Responsabilidad Única en el diseño de clases, sigue estos pasos:
+
+1. Identificar Responsabilidades: Examina el propósito de la clase y determina las
+diferentes responsabilidades que maneja.
+
+2. Dividir Responsabilidades: Si una clase maneja múltiples responsabilidades,
+divídelas en diferentes clases o componentes. Cada clase debe tener una única
+razón para cambiar.
+
+3. Definir Interfaces: Utiliza interfaces para definir claramente las responsabilidades y
+permitir que las clases dependan de estas interfaces en lugar de implementaciones
+concretas.
+
+4. Refactorizar: Refactoriza el código existente para aplicar SRP, asegurando que
+cada clase esté enfocada en una única tarea.
+
+
+
+Identificación de Violaciones:
+
+● Múltiples Funciones en una Clase: Una clase que realiza varias tareas distintas
+(por ejemplo, manejo de datos, lógica de negocio y presentación).
+
+● Dependencias Excesivas: Cuando una clase depende de muchas otras clases,
+indicando que maneja múltiples responsabilidades.
+
+● Cambios Frecuentes: Si una clase cambia con frecuencia debido a cambios en
+diferentes aspectos de su funcionalidad, es una señal de violación de SRP.
+
+
+Mejoras:
+
+● Refactorizar Clases: Divide las clases grandes en clases más pequeñas que cada
+una maneje una sola responsabilidad.
+
+● Revisar las Dependencias: Asegúrate de que las clases solo dependan de las
+interfaces y no de implementaciones concretas, lo que facilita la separación de
+responsabilidades.
+
+● Aplicar Principios de Diseño: Utiliza patrones de diseño como el patrón de
+estrategia o el patrón de delegado para distribuir responsabilidades de manera
+efectiva.

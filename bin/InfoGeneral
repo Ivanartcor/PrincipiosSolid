@@ -1,0 +1,28 @@
+Los principios SOLID son un conjunto de directrices fundamentales para el diseño de
+software orientado a objetos, que buscan mejorar la calidad del código y facilitar su
+mantenimiento y evolución. Aquí tienes un resumen de cada principio:
+
+
+1. Principio de Responsabilidad Única (SRP): Una clase debe tener una única razón
+para cambiar, es decir, debe tener una única responsabilidad o motivo de cambio.
+Este principio ayuda a mantener el código organizado y reduce el acoplamiento.
+
+2. Principio de Abierto/Cerrado (OCP): Las entidades de software (como clases y
+módulos) deben estar abiertas para la extensión pero cerradas para la modificación.
+Esto significa que el código debe permitir la adición de nuevas funcionalidades sin
+cambiar el código existente.
+
+3. Principio de Sustitución de Liskov (LSP): Las clases derivadas deben poder
+reemplazar a sus clases base sin alterar el comportamiento correcto del programa.
+Este principio asegura que las subclases sean completamente intercambiables con
+sus clases base.
+
+4. Principio de Segregación de Interfaces (ISP): Los clientes no deben verse
+obligados a depender de interfaces que no utilizan. En su lugar, se deben crear
+interfaces específicas para cada cliente, evitando que las clases implementen
+métodos que no necesitan.
+
+5. Principio de Inversión de Dependencias (DIP): Las clases de alto nivel no deben
+depender de clases de bajo nivel, sino de abstracciones. Las abstracciones no
+deben depender de los detalles, sino que los detalles deben depender de las
+abstracciones. Este principio reduce el acoplamiento y mejora la flexibilidad.

@@ -1,0 +1,65 @@
+Principio de Inversión de Dependencias (DIP) establece que:
+
+1. Las dependencias deben estar en abstracciones, no en concreciones.
+
+2. Las abstracciones no deben depender de los detalles; los detalles deben
+depender de las abstracciones.
+
+Este principio promueve el diseño de sistemas donde las clases de alto
+nivel no dependen de las clases de bajo nivel, sino que ambas dependen de abstracciones
+(interfaces o clases abstractas).
+
+Esto se logra invirtiendo la dirección de las dependencias:
+en lugar de las clases de alto nivel depender de clases de bajo nivel, ambas deben
+depender de interfaces o clases abstractas que definen el comportamiento esperado.
+
+
+
+Para aplicar el Principio de Inversión de Dependencias en el diseño de clases, sigue estos
+pasos:
+
+1. Definir Abstracciones: Crea interfaces o clases abstractas que definan los
+comportamientos esperados. Estas abstracciones deben ser independientes de las
+implementaciones concretas.
+
+2. Inyección de Dependencias: Utiliza la inyección de dependencias para
+proporcionar instancias de clases concretas a las clases de alto nivel. Esto puede
+hacerse mediante constructor, métodos setter o inyección a través de frameworks de
+DI (Dependency Injection).
+
+3. Dependencias a Abstracciones: Asegúrate de que las clases de alto nivel
+dependan solo de las interfaces o clases abstractas, no de las implementaciones
+concretas. Esto facilita el cambio de implementación sin afectar a las clases de alto
+nivel.
+
+4. Refactorización para Cumplir con DIP: Revisa y refactoriza el código existente
+para aplicar DIP, moviendo las dependencias de clases concretas a interfaces o
+clases abstractas.
+
+
+Identificación de Violaciones:
+
+● Dependencias Directas: Cuando una clase de alto nivel depende directamente de
+una implementación concreta en lugar de una interfaz o clase abstracta.
+
+● Acoplamiento Fuerte: Si las clases están estrechamente acopladas a
+implementaciones específicas, lo que dificulta la extensión o sustitución de
+componentes.
+
+● Modificaciones Rigurosas: Si se requieren cambios en una clase de alto nivel cada
+vez que se cambia la implementación de las clases de bajo nivel.
+Mejoras:
+
+● Introduce Interfaces: Divide el código para que las clases de alto nivel dependan
+de interfaces o clases abstractas en lugar de implementaciones concretas.
+
+● Utiliza Inyección de Dependencias: Implementa técnicas de inyección de
+dependencias para proporcionar instancias de clases concretas a través de
+interfaces.
+
+● Refactoriza el Código: Revisa y refactoriza el código existente para reducir el
+acoplamiento y aumentar la flexibilidad, alineándote con el DIP.
+
+● Aplicar Principios SOLID: Asegúrate de que el diseño cumple con todos los
+principios SOLID, ya que estos principios trabajan en conjunto para promover un
+diseño de software robusto y flexible.
